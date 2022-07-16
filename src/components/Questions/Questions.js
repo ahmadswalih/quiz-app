@@ -12,6 +12,7 @@ const Questions = ({
   questions,
   score,
   setScore,
+  setQuestions,
 }) => {
   const [selected, setSelected] = useState();
   const [error, setError] = useState(false);
@@ -30,7 +31,12 @@ const Questions = ({
     if (i === correct) setScore(score + 1);
     setError(false);
   };
-  const handleQuit = () => {};
+
+  const handleQuit = () => {
+    setCurrQues(0);
+    setQuestions();
+  };
+
   const handleNext = () => {
     if (currQues > 8) {
       history("/result");
@@ -69,7 +75,8 @@ const Questions = ({
             color="secondary"
             size="large"
             style={{ width: 185 }}
-            onClick={handleQuit}
+            href="/"
+            onClick={() => handleQuit()}
           >
             Quit
           </Button>
