@@ -6,11 +6,13 @@
   </a>
 </p>
 
-> Intuitive Quiz app is a quiz application created using React Js and materialUI . The applicaiton uses api from the website trivia.
+> Intuitive Quiz app is a quiz application created using React Js and materialUI . The applicaiton uses api from the website <a href="https://opentdb.com/api_config.php"> trivia </a>.
+
+
+## ✨ [Demo](https://intuitive-quiz-app-sw.netlify.app/)
 
 ### 🏠 [Homepage](src/App.js)
 
-### ✨ [Demo](https://nothing)
 
 ## Install
 
