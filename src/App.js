@@ -6,11 +6,21 @@ import Home from "./Pages/Home/Home";
 import Result from "./Pages/Result/Result";
 import Quiz from "./Pages/Quiz/Quiz";
 import { useState } from "react";
+import axios from "axios";
 
 const App = () => {
   const [name, setName] = useState("");
+  const [questions, setQuestions] = useState();
+  const [score, setScore] = useState(0);
 
-  const fetchQuestions = () => {};
+  const fetchQuestions = async (category = "", difficulty = "") => {
+    const { data } = await axios.get(
+      `https://opentdb.com/api.php?amount=10${
+        category && `&category=${category}`
+      }${difficulty && `&difficulty=${difficulty}`}&type=multiple`
+    );
+    setQuestions(data.results);
+  };
 
   return (
     <BrowserRouter>
@@ -28,7 +38,19 @@ const App = () => {
               />
             }
           />
-          <Route path="/quiz" exact element={<Quiz />} />
+          <Route
+            path="/quiz"
+            exact
+            element={
+              <Quiz
+                name={name}
+                score={score}
+                setScore={setScore}
+                questions={questions}
+                setQuestions={setQuestions}
+              />
+            }
+          />
           <Route path="/result" exact element={<Result />} />
         </Routes>
       </div>
