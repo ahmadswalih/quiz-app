@@ -2,10 +2,10 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div style={{ textAlign: "center", marginBottom: "10" }}>
+    <div style={{ textAlign: "center", marginBottom: "10", padding: "10px" }}>
       Made by{" "}
       <a style={{ cursor: "pointer" }} href="https://github.com/ahmadswalih">
-        Ahmad swalih
+        <span style={{ color: "green" }}> Ahmad swalih </span>
       </a>
     </div>
   );
