@@ -16,7 +16,7 @@ const Quiz = ({ name, questions, setQuestions, score, setScore }) => {
           ...questions[currQues]?.incorrect_answers,
         ])
     );
-  }, [questions]);
+  }, [questions, currQues]);
   console.log(options);
   const handlShuffle = (optionss) => {
     return optionss.sort(() => Math.random() - 0.5);
