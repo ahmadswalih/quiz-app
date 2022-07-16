@@ -5,21 +5,36 @@ import Header from "./components/Header/Header";
 import Home from "./Pages/Home/Home";
 import Result from "./Pages/Result/Result";
 import Quiz from "./Pages/Quiz/Quiz";
+import { useState } from "react";
 
-function App() {
+const App = () => {
+  const [name, setName] = useState("");
+
+  const fetchQuestions = () => {};
+
   return (
     <BrowserRouter>
       <div className="app" style={{ backgroundImage: "url(./ques1.png)" }}>
         <Header />
         <Routes>
-          <Route path="/" exact element={<Home />} />
+          <Route
+            path="/"
+            exact
+            element={
+              <Home
+                name={name}
+                setName={setName}
+                fetchQuestions={fetchQuestions}
+              />
+            }
+          />
           <Route path="/quiz" exact element={<Quiz />} />
           <Route path="/result" exact element={<Result />} />
         </Routes>
-        <Footer />
       </div>
+      <Footer />
     </BrowserRouter>
   );
-}
+};
 
 export default App;
