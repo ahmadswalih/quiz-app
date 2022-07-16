@@ -12,7 +12,6 @@ const Questions = ({
   questions,
   score,
   setScore,
-  setQuestions,
 }) => {
   const [selected, setSelected] = useState();
   const [error, setError] = useState(false);
@@ -34,7 +33,7 @@ const Questions = ({
   const handleQuit = () => {};
   const handleNext = () => {
     if (currQues > 8) {
-      history.push("/result");
+      history("/result");
     } else if (selected) {
       setCurrQues(currQues + 1);
       setSelected();

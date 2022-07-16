@@ -51,7 +51,11 @@ const App = () => {
               />
             }
           />
-          <Route path="/result" exact element={<Result />} />
+          <Route
+            path="/result"
+            exact
+            element={<Result name={name} score={score} />}
+          />
         </Routes>
       </div>
       <Footer />
