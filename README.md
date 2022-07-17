@@ -13,6 +13,11 @@
 
 ### 🏠 [Homepage](src/App.js)
 
+## Screenshots
+<img src="/screenshot/Screenshot%20from%202022-07-16%2022-15-17.png" width="800" alt="Home Page" />
+<img src="/screenshot/Screenshot%20from%202022-07-16%2022-15-33.png" width="800" alt="Quiz Page"/>
+<img src="/screenshot/Screenshot%20from%202022-07-16%2022-16-35.png" width="800" alt="Final Page"/>
+
 
 ## Install
 
