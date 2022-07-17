@@ -11,7 +11,8 @@ const Result = ({ name, score }) => {
   }, [name, history]);
   return (
     <div className="result">
-      <span className="title">Final Score : {score}</span>
+      <span className="congra">Congratulations 🤩</span>
+      <span className="title">Your Final Score is : {score}/10</span>
       <Button
         variant="contained"
         color="secondary"
@@ -19,7 +20,7 @@ const Result = ({ name, score }) => {
         style={{ alignSelf: "center", marginTop: 20 }}
         href="/"
       >
-        Back to Home
+        Try Again
       </Button>
     </div>
   );
