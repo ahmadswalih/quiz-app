@@ -7,6 +7,7 @@ import Result from "./Pages/Result/Result";
 import Quiz from "./Pages/Quiz/Quiz";
 import { useState } from "react";
 import axios from "axios";
+import NotFound from "./Pages/NotFound/NotFound";
 
 const App = () => {
   const [name, setName] = useState("");
@@ -56,6 +57,7 @@ const App = () => {
             exact
             element={<Result name={name} score={score} />}
           />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
       <Footer />
