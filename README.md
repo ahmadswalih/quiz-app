@@ -8,10 +8,16 @@
 
 > Intuitive Quiz app is a quiz application created using React Js and materialUI . The applicaiton uses api from the website <a href="https://opentdb.com/api_config.php"> trivia </a>.
 
+## Overview
+
+This is a simple quiz application where users can enter their name , select category of quiz and difficulty level of the quiz , then the user can start the quiz. Each Right answer will have one mark and that will be shown in the Top-Right corner. Users will also have four options for each questions , once the user selected an option and the selected option is the correct answer then the option colour changes to green otherwise changes to red to indicate it is the wrong answer . after , the 10th question user will be redirect to the results page and their users can see their final score .
+
 
 ## ✨ [Demo](https://intuitive-quiz-app-sw.netlify.app/)
 
 ### 🏠 [Homepage](src/App.js)
+
+
 
 ## Screenshots
 <img src="/screenshot/Screenshot%20from%202022-07-16%2022-15-17.png" width="800" alt="Home Page" />
